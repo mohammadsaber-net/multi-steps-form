@@ -1,0 +1,33 @@
+.box {
+    background-color: var(--Blue100-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.plan {
+    border-bottom: 1px solid var(--Blue200-color);
+}
+
+.change {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.change,
+.ons-type,
+.total {
+    color: var(--Grey500-color);
+}
+
+.total-price {
+    color: var(--purple600-color);
+    font-size: 22px;
+}
+
+.ons-type {
+    font-size: 12px;
+}
+
+.price {
+    color: var(--Blue300-color);
+}

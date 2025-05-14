@@ -1,0 +1,29 @@
+<div class="content">
+    <div class="info">
+        <h2 class="title">pick add-ons</h2>
+        <p class="information">
+            add-ons help enhance your gaming experiance
+        </p>
+    </div>
+    <form class="mar-b" [formGroup]="onsNext">
+        @for(item of state;track item; let index=$index){
+        <label [for]=`check-${index}` class="box">
+            <div class="check d-flex gap-2">
+                <input [formControlName]="index" [value]="index" (change)="control($event)" [id]=`check-${index}`
+                    type="checkbox">
+                <div>
+                    <h5 class="mb-1">{{item.kind}}</h5>
+                    <span>{{item.infoo}}</span>
+                </div>
+            </div>
+            <div class="price">
+                ${{item.price}}/mo
+            </div>
+        </label>
+        }
+    </form>
+    <div class="bTn">
+        <button [disabled]="onsNext.invalid" class="next" (click)="next()">next step</button>
+        <button class="back" (click)="back()">go back</button>
+    </div>
+</div>

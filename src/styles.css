@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:root {
+    --Blue950-color: hsl(213, 96%, 18%);
+    --purple600-color: hsl(243, 100%, 62%);
+    --Blue300-color: hsl(228, 100%, 84%);
+    --Blue200-color: hsl(206, 94%, 87%);
+    --Red500-color: hsl(354, 84%, 57%);
+    --Grey500-color: hsl(231, 11%, 63%);
+    --Purple200-color: hsl(229, 24%, 87%);
+    --Blue100-color: hsl(218, 100%, 97%);
+    --Blue50-color: hsl(231, 100%, 99%);
+    --White-color: hsl(0, 100%, 100%)
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--Blue100-color);
+}
+
+.content {
+    padding: 20px 20px 0;
+    min-height: calc(100vh - 300px);
+}
+
+@media(min-width:767px) {
+    .content {
+        position: relative;
+        padding: 20px 70px;
+    }
+
+    .mar-b {
+        margin-bottom: 100px;
+    }
+}
+
+
+
+
+.title {
+    color: var(--Blue950-color);
+}
+
+.information {
+    font-size: 14px;
+    color: var(--Grey500-color);
+
+}
+
+.bTn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    width: 100%;
+    background-color: white;
+}
+
+
+
+.next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translatey(-50%);
+    background-color: var(--Blue950-color);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translatey(-50%);
+    color: var(--Grey500-color);
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+}

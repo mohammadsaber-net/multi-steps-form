@@ -1,0 +1,41 @@
+<div class="content">
+    <div class="info">
+        <h2 class="title">personal info</h2>
+        <p class="information">please provide your name, email address and phone number</p>
+    </div>
+    <form [formGroup]="nextForm">
+        <div class="mb-dm-3 mb-1">
+            <span class="d-flex justify-content-between">
+                <label class="d-block" for="name">name</label>
+                @if(nextForm.get("username")?.getError("required") && nextForm.get("username")?.touched){
+                <small class="text-danger">this field is required</small>}
+            </span>
+            <input formControlName="username" type="text" id="name" placeholder="e.g stephen king">
+        </div>
+        <div class="mb-dm-3 mb-1">
+            <span class="d-flex justify-content-between">
+                <label class="d-block" for="email">email</label>
+                @if(nextForm.get("email")?.getError("required") && nextForm.get("email")?.touched){
+                <small class="text-danger">this field is required</small>}
+            </span>
+            <input formControlName="email" type="email" id="email" placeholder="e.g stephen@lorem.com">
+            @if(nextForm.get("email")?.getError("email")){
+            <small class="text-danger">invalid email address</small>
+            }
+        </div>
+        <div class="mar-b pb-3">
+            <span class="d-flex justify-content-between">
+                <label class="d-block" for="phone">phone</label>
+                @if(nextForm.get("phone")?.getError("required") && nextForm.get("phone")?.touched){
+                <small class="text-danger">this field is required</small>}
+            </span>
+            <input formControlName="phone" type="tel" id="phone" placeholder="e.g +201023966702">
+            @if(nextForm.get("phone")?.getError("pattern")){
+            <small class="text-danger">invalid phone number</small>
+            }
+        </div>
+        <div class="bTn">
+            <button [disabled]="nextForm.invalid" class="next" (click)="next()">next step</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,51 @@
+form .box {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--Blue100-color);
+    display: flex;
+    background-color: var(--White-color);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active {
+    background-color: var(--Blue100-color) !important;
+    border-color: var(--Blue300-color) !important;
+}
+
+form label:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+form h5 {
+    color: var(--Blue950-color);
+}
+
+form span {
+    color: var(--Grey500-color);
+    font-size: 12px;
+}
+
+
+.price {
+    color: var(--purple600-color);
+}
+
+form input:checked>label {
+    flex-direction: column;
+}
+
+@media (max-width:767px) {
+    form {
+        margin-bottom: 10px;
+    }
+
+    form label:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    form span {
+        font-size: 10px;
+    }
+}

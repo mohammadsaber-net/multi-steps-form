@@ -1,0 +1,43 @@
+<div class="main-body d-flex">
+    <div class="main">
+        <div class="box">
+            <ul class="list-unstyled">
+                <li class="d-flex gap-3 align-items-center">
+                    <span routerLinkActive="text-dark bg-light" routerLink="info"
+                        class="number d-flex align-items-center justify-content-center active">1</span>
+                    <span>
+                        <span class="text-light">step 1</span>
+                        <div class="text-white text-uppercase">your info</div>
+                    </span>
+                </li>
+                <li class="d-flex gap-3 align-items-center">
+                    <span routerLinkActive="text-dark bg-light" routerLink="plan"
+                        class="number d-flex align-items-center justify-content-center active">2</span>
+                    <span>
+                        <span class="text-light">step 2</span>
+                        <div class="text-white text-uppercase">select plan</div>
+                    </span>
+                </li>
+                <li class="d-flex gap-3 align-items-center">
+                    <span routerLinkActive="text-dark bg-light" routerLink="add-ons"
+                        class="number d-flex align-items-center justify-content-center active">3</span>
+                    <span>
+                        <span class="text-light">step 3</span>
+                        <div class="text-white text-uppercase">add ons</div>
+                    </span>
+                </li>
+                <li class="d-flex gap-3 align-items-center">
+                    <span routerLink="summary" routerLinkActive="text-dark bg-light"
+                        class="number d-flex align-items-center justify-content-center active">4</span>
+                    <span>
+                        <span class="text-light">step 4</span>
+                        <div class="text-white text-uppercase">summary</div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="router-site">
+        <router-outlet></router-outlet>
+    </div>
+</div>

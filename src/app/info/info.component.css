@@ -1,0 +1,22 @@
+form label {
+    color: var(--Blue950-color);
+}
+
+form input {
+    border: 1px solid var(--Purple200-color);
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+form input::placeholder {
+    color: var(--Grey500-color);
+}
+
+input:focus {
+    outline-color: var(--Blue300-color);
+}
+
+input:focus ::placeholder {
+    opacity: none;
+}

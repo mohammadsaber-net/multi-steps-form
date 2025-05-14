@@ -1,0 +1,34 @@
+<div class="content">
+    <div>
+        <h2 class="title">select your plan</h2>
+        <p class="information">you have the option of monthly or yearly billing</p>
+    </div>
+    <form [formGroup]="nextPlan" class="h-100 ">
+        <div class=" choice d-flex justify-content-between algin-items-center">
+            @for(item of amount;track item;let index=$index){
+            <div>
+                <input formControlName="index" type="radio" [id]="item.type" [value]="index">
+                <label [for]="item.type">
+                    <img [src]=`${item.image}` alt="">
+                    <div class="info">
+                        <span class="title mb-1">{{item.type}}</span>
+                        <p class="information mb-0">${{item.price}}/mo</p>
+                        @if(!active){
+                        <span class="free">2 months free</span> }
+                    </div>
+                </label>
+            </div>
+            }
+        </div>
+        <div class="w-100 mar-b  budget">
+            <label [class]="active?'actived':'not-active'">monthly</label>
+            <input (change)="value()" id="checking" class="switch" type="checkbox" checked />
+            <label for="checking" class="switch-toggle"></label>
+            <label [class]="!active?'actived':'not-active'">yearly</label>
+        </div>
+        <div class="bTn">
+            <button [disabled]="nextPlan.invalid" class="next" (click)="next()">next step</button>
+            <button class="back" (click)="back()">go back</button>
+        </div>
+    </form>
+</div>

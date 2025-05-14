@@ -1,0 +1,40 @@
+<div class="content">
+    <div class="info">
+        <h3 class="title">finishing up</h3>
+        <p class="information">double-check everything looks OK before confirming</p>
+    </div>
+    <div class="box mb-3">
+        <div class="plan mb-3 d-flex justify-content-between align-items-center">
+            <div>
+                <span class="title d-block fs-lg-4">{{plan.type}}
+                    @if(monthly){
+                    (Monthly)
+                    }@else {
+                    (Yearly)
+                    }
+                </span>
+                <span (click)="change()" class="change">change</span>
+            </div>
+            @if(monthly){<div class="title fs-lg-5">${{plan.price}}/mo</div>}
+            @else {<div class="title fs-lg-5">${{plan.price * 10}}/yr</div>}
+        </div>
+        <div class="addOns">
+            @for(item of addOns;track item){
+            <div class="d-flex align-items-center justify-content-between">
+                <span class="ons-type">{{item.type}}</span>
+                @if(monthly){<span class="title ">${{item.price}}/mo</span>}
+                @else{<span class="title ">${{item.price * 10}}/yr</span>}
+            </div>
+            }
+        </div>
+    </div>
+    <div class="p-2 mar-b d-flex justify-content-between align-items-center">
+        <span class="total">total</span>
+        @if(monthly){<span class="total-price">${{total}}/mo</span>}
+        @else {<span class="total-price">${{total * 10}}/yr</span>}
+    </div>
+    <div class="bTn">
+        <button (click)="confirm()" class="next">confirm</button>
+        <button class="back" (click)="back()">back</button>
+    </div>
+</div>
