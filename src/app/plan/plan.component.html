@@ -7,7 +7,7 @@
         <div class=" choice d-flex justify-content-between algin-items-center">
             @for(item of amount;track item;let index=$index){
             <div>
-                <input formControlName="index" type="radio" [id]="item.type" [value]="index">
+                <input class="info-plan" formControlName="index" type="radio" [id]="item.type" [value]="index">
                 <label [for]="item.type">
                     <img [src]=`${item.image}` alt="">
                     <div class="info">
