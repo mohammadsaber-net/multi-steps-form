@@ -65,8 +65,8 @@ label img {
 }
 
 .switch {
-    display: none;
     appearance: none;
+    -webkit-appearance: none;
 }
 
 .switch-toggle {
